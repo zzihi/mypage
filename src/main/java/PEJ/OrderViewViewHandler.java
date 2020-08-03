@@ -48,6 +48,7 @@ public class OrderViewViewHandler {
                 for(OrderView orderView : orderViewList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     orderView.setOrderStatus(shipped.getDeliveryStatus());
+                    orderView.setDeliveryStatus(shipped.getDeliveryStatus());
                     // view 레파지 토리에 save
                     orderViewRepository.save(orderView);
                 }
@@ -65,6 +66,7 @@ public class OrderViewViewHandler {
                 for(OrderView orderView : orderViewList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     orderView.setOrderStatus(deliveryCanceled.getDeliveryStatus());
+                    orderView.setDeliveryStatus(deliveryCanceled.getDeliveryStatus());
                     // view 레파지 토리에 save
                     orderViewRepository.save(orderView);
                 }

@@ -14,7 +14,6 @@ public class OrderView {
         private String orderStatus;
         private String prdId;
         private Integer prdQty;
-        private String deliveryId;
         private String deliveryStatus;
         private String prdNm;
         private Integer prdPrice;
@@ -55,13 +54,7 @@ public class OrderView {
         public void setPrdQty(Integer prdQty) {
             this.prdQty = prdQty;
         }
-        public String getDeliveryId() {
-            return deliveryId;
-        }
 
-        public void setDeliveryId(String deliveryId) {
-            this.deliveryId = deliveryId;
-        }
         public String getDeliveryStatus() {
             return deliveryStatus;
         }

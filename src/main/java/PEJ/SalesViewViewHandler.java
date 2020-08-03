@@ -45,6 +45,8 @@ public class SalesViewViewHandler {
                 salesView.setPurchaseId(purchased.getPurchaseId());
                 salesView.setPurchaseStatus(purchased.getPurchaseStatus());
                 salesView.setPrdId(purchased.getPrdId());
+                salesView.setPrdPrice(purchased.getPrdPrice());
+                salesView.setPrdNm(purchased.getPrdNm());
                 salesView.setPurchaseQty(purchased.getPurchaseQty());
                 salesView.setPurchaseAmt(purchased.getPurchaseAmt());
                 // view 레파지 토리에 save
@@ -102,6 +104,7 @@ public class SalesViewViewHandler {
                     System.out.println("#####START2 + " + cancelled.getPurchaseStatus());
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
                     salesView.setPurchaseStatus("취소됨");
+
                     // view 레파지 토리에 save
                     salesViewRepository.save(salesView);
                 }
