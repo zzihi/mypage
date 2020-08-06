@@ -22,6 +22,8 @@ public class TbViewViewHandler {
                 // view 객체 생성
                 TbView tbView = new TbView();
                 // view 객체에 이벤트의 Value 를 set 함
+                tbView.setPayId(tbordered.getTbId());
+                tbView.setPayStatus("PAYED");
                 tbView.setTbId(tbordered.getTbId());
                 tbView.setTbStatus(tbordered.getTbStatus());
                 // view 레파지 토리에 save
@@ -40,6 +42,7 @@ public class TbViewViewHandler {
                 List<TbView> tbViewList = tbViewRepository.findByTbId(tbcancelled.getTbId());
                 for(TbView tbView : tbViewList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
+                    tbView.setPayStatus("CANCELLED");
                     tbView.setTbStatus(tbcancelled.getTbStatus());
                     // view 레파지 토리에 save
                     tbViewRepository.save(tbView);
